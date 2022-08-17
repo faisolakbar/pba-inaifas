@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "Roboto";
+    font-weight: 400;
+    src: url("./assets/fonts/ROBOTO-REGULAR.woff") format("woff"),
+      url("./assets/fonts/ROBOTO-REGULAR.woff2") format("woff2");
+  }
+  ,
+  @font-face {
+    font-family: "Roboto";
+    font-weight: 400;
+    font-style: italic;
+    src: url("./assets/fonts/ROBOTO-ITALIC.woff") format("woff"),
+      url("./assets/fonts/ROBOTO-ITALIC.woff2") format("woff2");
+  }
+  ,
+  @font-face {
+    font-family: "Roboto";
+    font-weight: 700;
+    src: url("./assets/fonts/ROBOTO-BOLD.woff") format("woff"),
+      url("./assets/fonts/ROBOTO-BOLD.woff2") format("woff2");
+  }
+  ,
+  @font-face {
+    font-family: "Roboto";
+    font-weight: 700;
+    font-style: italic;
+    src: url("./assets/fonts/ROBOTO-BOLDITALIC.woff") format("woff"),
+      url("./assets/fonts/ROBOTO-BOLDITALIC.woff2") format("woff2");
+  }
+}
+
+@layer components {
+  .dropdown-item {
+    @apply block w-full px-2 py-1;
+  }
+}
+
+.fade-anim img {
+  animation: fadeAnim 0.5s ease-out;
+}
+@keyframes fadeAnim {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #ffffff;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
