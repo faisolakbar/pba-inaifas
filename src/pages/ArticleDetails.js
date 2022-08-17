@@ -117,7 +117,8 @@ export default function ArticleDetails() {
             ))}
           </div>
           {/* isi */}
-          <div className="prose prose-sm text-slate700 prose-strong:text-second prose-a:text-link tracking-wide my-4 max-w-none lg:prose-base">
+          <div className="prose prose-sm text-slate700 prose-strong:text-second prose-a:text-link prose-p:indent-7 tracking-wide my-4 max-w-none lg:prose-base">
+
             <ReactMarkdown children={data.data.attributes.isi} />
             {/* pdf */}
             {data.data.attributes.pdf.data ? (
