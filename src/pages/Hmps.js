@@ -3,7 +3,6 @@ import Aside from "../component/Aside";
 import useFetch from "../hooks/useFetch";
 import ReactMarkdown from "react-markdown";
 
-const config = require("../config.json");
 export default function Hmps() {
   const { loading, error, data } = useFetch(`/api/hmp-studi?populate=%2A`);
   if (error !== null) {
@@ -33,7 +32,7 @@ export default function Hmps() {
             <h2>{data.data.attributes.judul}</h2>
             <img
               src={
-                config.url + data.data.attributes.gambar.data.attributes.url
+                data.data.attributes.gambar.data.attributes.url
               }
               alt=""
             />

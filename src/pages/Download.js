@@ -4,7 +4,6 @@ import useFetch from "../hooks/useFetch";
 import { useState } from "react";
 import Pagination from "../component/Pagination";
 
-const config = require("../config.json");
 export default function Download() {
   const [page, setPage] = useState(1);
   const { loading, error, data } = useFetch(
@@ -41,7 +40,6 @@ export default function Download() {
                         {download.attributes.pdf.data ? (
                           <a
                             href={
-                              config.url +
                               download.attributes.pdf.data.attributes.url
                             }
                             target="_blank"

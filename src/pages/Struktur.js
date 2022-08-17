@@ -2,7 +2,6 @@ import { Helmet, HelmetProvider } from "react-helmet-async";
 import Aside from "../component/Aside";
 import useFetch from "../hooks/useFetch";
 
-const config = require("../config.json");
 export default function Struktur() {
   const { loading, error, data } = useFetch(`/api/struktur?populate=%2A`);
   if (error !== null) {
@@ -28,7 +27,7 @@ export default function Struktur() {
           <h1>Struktur Organisasi Program Studi Pendidikan Bahasa Arab</h1>
           <img
             src={
-              config.url + data.data.attributes.gambar.data.attributes.url
+              data.data.attributes.gambar.data.attributes.url
             }
             alt={data.data.attributes.gambar.data.attributes.name}
           />

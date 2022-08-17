@@ -2,7 +2,6 @@ import { Helmet, HelmetProvider } from "react-helmet-async";
 import Aside from "../component/Aside";
 import useFetch from "../hooks/useFetch";
 
-const config = require("../config.json");
 export default function DokumenPenjaminanMutu() {
   const { loading, error, data } = useFetch(
     `/api/dokumen-penjaminan-mutus?populate=%2A&sort[0]=publishedAt%3Adesc`
@@ -40,7 +39,6 @@ export default function DokumenPenjaminanMutu() {
                       {dokumen.attributes.pdf.data ? (
                         <a
                           href={
-                            config.url +
                             dokumen.attributes.pdf.data.attributes.url
                           }
                           target="_blank"

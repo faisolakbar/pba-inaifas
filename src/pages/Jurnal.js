@@ -3,7 +3,6 @@ import ReactMarkdown from "react-markdown";
 import Aside from "../component/Aside";
 import useFetch from "../hooks/useFetch";
 
-const config = require("../config.json");
 export default function Jurnal() {
   const { loading, error, data } = useFetch(`/api/jurnals?populate=%2A`);
   if (error !== null) {
@@ -34,7 +33,6 @@ export default function Jurnal() {
                 <div>
                   <img
                     src={
-                      config.url +
                       jurnal.attributes.gambar.data.attributes.formats.medium
                         .url
                     }

@@ -2,7 +2,6 @@ import { Helmet, HelmetProvider } from "react-helmet-async";
 import Aside from "../component/Aside";
 import useFetch from "../hooks/useFetch";
 
-const config = require("../config.json");
 export default function Akreditas() {
   const { loading, error, data } = useFetch(
     `/api/akreditasis?populate=%2A&sort[0]=publishedAt%3Adesc`
@@ -36,7 +35,6 @@ export default function Akreditas() {
                       {akreditas.attributes.pdf.data ? (
                         <a
                           href={
-                            config.url +
                             akreditas.attributes.pdf.data.attributes.url
                           }
                           target="_blank"

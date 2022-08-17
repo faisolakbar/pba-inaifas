@@ -2,7 +2,6 @@ import { Helmet, HelmetProvider } from "react-helmet-async";
 import Aside from "../component/Aside";
 import useFetch from "../hooks/useFetch";
 
-const config = require("../config.json");
 export default function JadwalKuliah() {
   const { loading, error, data } = useFetch(
     `/api/jadwal-kuliahs?populate=%2A&sort[0]=publishedAt%3Adesc`
@@ -37,7 +36,6 @@ export default function JadwalKuliah() {
                       {jadwal.attributes.pdf.data ? (
                         <a
                           href={
-                            config.url +
                             jadwal.attributes.pdf.data.attributes.url
                           }
                           target="_blank"

@@ -7,7 +7,6 @@ import Aside from "../component/Aside";
 import Pagination from "../component/Pagination";
 import useFetch from "../hooks/useFetch";
 
-const config = require("../config.json");
 export default function ShowMore({ category }) {
   const [page, setPage] = useState(1);
   const { loading, error, data } = useFetch(
@@ -58,9 +57,7 @@ export default function ShowMore({ category }) {
                     <div className="aspect-h-1 aspect-w-3 group mb-3 md:aspect-w-4 md:aspect-h-2">
                       <img
                         src={
-                          config.url +
-                          berita.attributes.gambar.data.attributes.formats.small
-                            .url
+                          berita.attributes.gambar.data.attributes.formats.small.url
                         }
                         className="object-cover group-hover:brightness-[.7]"
                         alt={`${berita.attributes.gambar.data.attributes.name}`}

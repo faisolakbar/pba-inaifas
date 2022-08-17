@@ -2,7 +2,6 @@ import { Helmet, HelmetProvider } from "react-helmet-async";
 import Aside from "../component/Aside";
 import useFetch from "../hooks/useFetch";
 
-const config = require("../config.json");
 export default function Fasilitas() {
   const { loading, error, data } = useFetch(
     `/api/sarana-prasaranas?populate=%2A`
@@ -35,7 +34,6 @@ export default function Fasilitas() {
                   <div className="aspect-w-4 aspect-h-2 m-0">
                     <img
                       src={
-                        config.url +
                         fasilitas.attributes.gambar.data.attributes.formats.small.url
                       }
                       alt={fasilitas.attributes.gambar.data.attributes.name}

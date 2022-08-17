@@ -2,7 +2,6 @@ import { Helmet, HelmetProvider } from "react-helmet-async";
 import Aside from "../component/Aside";
 import useFetch from "../hooks/useFetch";
 
-const config = require("../config.json");
 export default function Haki() {
   const { loading, error, data } = useFetch(
     `/api/haki?populate[0]=daftar_haki&populate[1]=daftar_haki.sertifikat`
@@ -51,7 +50,6 @@ export default function Haki() {
                         {daftar.sertifikat.data ? (
                           <a
                             href={
-                              config.url +
                               daftar.sertifikat.data.attributes.url
                             }
                             target="_blank"

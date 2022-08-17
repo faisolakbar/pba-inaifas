@@ -4,7 +4,6 @@ import useFetch from "../hooks/useFetch";
 import { Disclosure, Transition } from "@headlessui/react";
 import { FaAngleUp } from "react-icons/fa";
 
-const config = require("../config.json");
 export default function Faq() {
   const { loading, error, data } = useFetch(`/api/faqs?populate=%2A`);
   if (error !== null) {
@@ -55,7 +54,7 @@ export default function Faq() {
                         <p className="text-left m-0 md:m-0">{faq.attributes.jawaban}</p>
                         {faq.attributes.pdf.data ? (
                           <a
-                            href={config.url + faq.attributes.pdf.data.attributes.url}
+                            href={faq.attributes.pdf.data.attributes.url}
                             target="_blank"
                             rel="noopener noreferrer"
                           >

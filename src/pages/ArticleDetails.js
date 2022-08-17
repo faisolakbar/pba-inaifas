@@ -8,7 +8,6 @@ import { Helmet, HelmetProvider } from "react-helmet-async";
 import ReactMarkdown from "react-markdown";
 import { useState } from "react";
 
-const config = require("../config.json");
 export default function ArticleDetails() {
   var [dataComment, setDataComment] = useState([]);
   const params = useParams();
@@ -124,7 +123,7 @@ export default function ArticleDetails() {
             {data.data.attributes.pdf.data ? (
               <a
                 href={
-                  config.url + data.data.attributes.pdf.data.attributes.url
+                  data.data.attributes.pdf.data.attributes.url
                 }
                 target="_blank"
                 rel="noreferrer"

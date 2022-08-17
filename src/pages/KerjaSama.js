@@ -4,7 +4,6 @@ import Aside from "../component/Aside";
 import Pagination from "../component/Pagination";
 import useFetch from "../hooks/useFetch";
 
-const config = require("../config.json");
 export default function KerjaSama() {
   const [page, setPage] = useState(1);
   const { loading, error, data } = useFetch(
@@ -59,7 +58,6 @@ export default function KerjaSama() {
                         {kerjasama.attributes.spk.data ? (
                           <a
                             href={
-                              config.url +
                               kerjasama.attributes.spk.data.attributes.url
                             }
                             target="_blank"

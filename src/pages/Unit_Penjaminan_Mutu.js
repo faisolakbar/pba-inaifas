@@ -3,7 +3,6 @@ import Aside from "../component/Aside";
 import useFetch from "../hooks/useFetch";
 import ReactMarkdown from "react-markdown";
 
-const config = require("../config.json");
 export default function UnitPenjaminanMutu() {
   const { loading, error, data } = useFetch(
     `/api/unit-penjaminan-mutu?populate=%2A&sort[0]=publishedAt%3Adesc`
@@ -33,7 +32,7 @@ export default function UnitPenjaminanMutu() {
           <h1>Unit Penjaminan Mutu PBA INAIFAS</h1>
           <div>
             <ReactMarkdown children={data.data.attributes.isi}/>
-            {data.data.attributes.pdf.data ? ( <a href={config.url + data.data.attributes.pdf.data.attributes.url} target="_blank" rel="noopener noreferrer">unduh</a> ) : ("")}
+            {data.data.attributes.pdf.data ? ( <a href={data.data.attributes.pdf.data.attributes.url} target="_blank" rel="noopener noreferrer">unduh</a> ) : ("")}
           </div>
         </div>
         <div className="flex justify-center my-10 md:hidden">
