@@ -5,7 +5,6 @@ import useFetch from "../hooks/useFetch";
 import { useParams } from "react-router-dom";
 import { FaSpinner } from "react-icons/fa";
 
-const config = require("../config.json");
 export default function DataDosenCard({ data }) {
   let [isOpen, setIsOpen] = useState(false);
 
@@ -24,7 +23,6 @@ export default function DataDosenCard({ data }) {
                     <div className="h-16 w-16 p-1 rounded-full border border-main">
                       <img
                         src={
-                          config.url +
                           dosen.attributes.gambar.data.attributes.url
                         }
                         alt={dosen.attributes.gambar.data.attributes.name}
@@ -114,7 +112,7 @@ export function Pop({ setIsOpen }) {
                 <div className="w-16 h-16 aspect-1 p-1 rounded-full border border-main m-auto">
                   <img
                     src={
-                      config.url + data.data.attributes.gambar.data.attributes.url
+                      data.data.attributes.gambar.data.attributes.url
                     }
                     alt={data.data.attributes.gambar.data.attributes.name}
                     className="object-cover rounded-full"
