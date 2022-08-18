@@ -28,7 +28,7 @@ export default function Banner() {
     <div className="relative -z-50">
       <Slider {...settings}>
         {data.data.map((banner) =>
-            <div className="w-full m-auto">
+            <div className="w-full m-auto" key={banner.id}>
               <img src={banner.attributes.gambar.data.attributes.url} alt={banner.attributes.nama} />
             </div>
         )}

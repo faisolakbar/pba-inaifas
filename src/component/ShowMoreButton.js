@@ -13,7 +13,7 @@ export default function ShowMoreButton({ category }) {
     targetRef
   );
   return (
-    <div className="flex justify-end py-3" ref={targetRef}>
+    <div className="flex justify-end py-3 cursor-default" ref={targetRef}>
       <button
         onClick={() =>
           window.scrollTo({
@@ -26,7 +26,7 @@ export default function ShowMoreButton({ category }) {
           !isVisible
             ? "opacity-0 scale-95"
             : "opacity-100 scale-100 transition-all duration-500"
-        } flex items-center space-x-1 p-1 text-main transition-all duration-200 hover:text-second text-sm hover:translate-x-2 md:text-base`}
+        } cursor-pointer flex items-center space-x-1 p-1 text-main transition-all duration-200 hover:text-second text-sm hover:translate-x-2 md:text-base`}
       >
         <p className="capitalize">{category} lainnya</p>
         <FaArrowRight />
