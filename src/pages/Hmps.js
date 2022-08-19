@@ -30,13 +30,13 @@ export default function Hmps() {
           <h1>HMPS PBA</h1>
           <div>
             <h2>{data.data.attributes.judul}</h2>
+            <ReactMarkdown children={data.data.attributes.isi} />
             <img
               src={
                 data.data.attributes.gambar.data.attributes.url
               }
               alt=""
             />
-            <ReactMarkdown children={data.data.attributes.isi} />
           </div>
         </div>
         <div className="flex justify-center my-10 md:hidden">
