@@ -1,11 +1,11 @@
-import { useState } from "react";
+// import { useState } from "react";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import Aside from "../component/Aside";
-import Pagination from "../component/Pagination";
+// import Pagination from "../component/Pagination";
 import useFetch from "../hooks/useFetch";
 
 export default function RisetPendidikan() {
-  const [page, setPage] = useState(1);
+  // const [page, setPage] = useState(1);
   const { loading, error, data } = useFetch(
     ``
   );
@@ -34,7 +34,7 @@ export default function RisetPendidikan() {
           <div className="prose prose-sm prose-h1:text-second prose-p:my-2 prose-p:leading-tight prose-a:my-2 tracking-wide max-w-none md:prose-base">
             <h1>Riset Pendidikan</h1>
           </div>
-          <Pagination data={data} page={page} setPage={setPage} />
+          {/* <Pagination data={data} page={page} setPage={setPage} /> */}
           <div className="md:hidden flex justify-center my-10">
             <span className="h-[1px] w-3/4 bg-slate400"></span>
           </div>
