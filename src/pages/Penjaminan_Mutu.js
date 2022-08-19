@@ -2,9 +2,9 @@ import { Helmet, HelmetProvider } from "react-helmet-async";
 import Aside from "../component/Aside";
 import useFetch from "../hooks/useFetch";
 
-export default function DokumenPenjaminanMutu() {
+export default function PenjaminanMutu() {
   const { loading, error, data } = useFetch(
-    `/api/dokumen-penjaminan-mutus?populate=%2A&sort[0]=publishedAt%3Adesc`
+    `/api/penjaminan-mutus?populate=%2A&sort[0]=publishedAt%3Adesc`
   );
   if (error !== null) {
     return <div>{error.message}</div>;
@@ -17,18 +17,18 @@ export default function DokumenPenjaminanMutu() {
     <>
       <HelmetProvider>
         <Helmet>
-          <title>Dokumen Penjaminan Mutu PBA INAIFAS</title>
-          <meta name="description" content="Dokumen Penjaminan Mutu PBA INAIFAS" />
+          <title>Penjaminan Mutu PBA INAIFAS</title>
+          <meta name="description" content="Penjaminan Mutu PBA INAIFAS" />
           <link
             rel="canonical"
-            href="http://localhost:3000/dokumen-penjaminan-mutu"
+            href="http://localhost:3000/penjaminan-mutu"
           />
           <meta name="robots" content="index, follow" />
         </Helmet>
       </HelmetProvider>
       <div className="font-roboto container mx-auto text-slate700 my-2 pb-2 md:grid grid-cols-12 gap-6 md:my-4 md:pb-4 lg:my-8 lg:pb-8 lg:gap-8">
         <div className="prose prose-sm prose-h1:text-second prose-p:my-2 prose-p:leading-tight prose-a:my-2 prose-a:text-link tracking-wide max-w-none md:col-span-8 md:prose-base">
-          <h1>Dokumen Penjaminan Mutu</h1>
+          <h1>Penjaminan Mutu</h1>
           <div>
             <table className="table-auto lg:text-base">
               <tbody>

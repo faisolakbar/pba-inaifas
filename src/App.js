@@ -22,15 +22,13 @@ import Haki from "./pages/Haki";
 import TracerStudy from "./pages/TracerStudy";
 import Download from "./pages/Download";
 import Fasilitas from "./pages/Fasilitas";
-import JudulSkripsi from "./pages/JudulSkripsi";
-import AktifLulusan from "./pages/AktifLulusan";
+import RisetPendidikan from "./pages/RisetPendidikan";
 import Hmps from "./pages/Hmps";
 import DaftarPPLPKM from "./pages/DaftarPPLPKM";
 import DaftarUjianSkripsi from "./pages/DaftarUjianSkripsi";
-import RisetKolaboratif from "./pages/RisetKolaboratif";
+import RisetPKM from "./pages/RisetPKM";
 import LaporanTahunan from "./pages/LaporanTahunan";
-import UnitPenjaminanMutu from "./pages/Unit_Penjaminan_Mutu";
-import DokumenPenjaminanMutu from "./pages/Dokumen_Penjaminan_Mutu";
+import PenjaminanMutu from "./pages/Penjaminan_Mutu";
 import Faq from "./pages/Faq";
 
 function App() {
@@ -65,14 +63,13 @@ function App() {
         <Route path="/fasilitas" element={<Fasilitas />} />
 
         {/*mahasiswa*/}
-        <Route path="/aktif-lulusan" element={<AktifLulusan />} />
         <Route path="/tracer-study" element={<TracerStudy />} />
         <Route path="/kategori/prestasi" element={<ShowMore category="prestasi"/>}/>
         <Route path="/hmps" element={<Hmps />} />
 
         {/*riset*/}
-        <Route path="/judul-skripsi" element={<JudulSkripsi />} />
-        <Route path="/riset-kolaboratif" element={<RisetKolaboratif />} />
+        <Route path="/riset-pendidikan" element={<RisetPendidikan />} />
+        <Route path="/riset-PKM" element={<RisetPKM />} />
         <Route path="/daftar-ppl-pkm" element={<DaftarPPLPKM />} />
         <Route path="/daftar-ujian-skripsi" element={<DaftarUjianSkripsi />} />
 
@@ -86,8 +83,7 @@ function App() {
 
         {/*penjaminan mutu*/}
         <Route path="/laporan-tahunan" element={<LaporanTahunan />} />
-        <Route path="/unit-penjaminan-mutu" element={<UnitPenjaminanMutu />} />
-        <Route path="/dokumen-penjaminan-mutu" element={<DokumenPenjaminanMutu />} />
+        <Route path="/penjaminan-mutu" element={<PenjaminanMutu />} />
 
         {/*penjaminan mutu*/}
         <Route path="/faq" element={<Faq />} />

@@ -121,14 +121,6 @@ export const MenuItems = [
     title: "Mahasiswa",
     submenu: [
       {
-        title: "Aktif/Lulusan",
-        link: (
-          <Link to="/aktif-lulusan" className="dropdown-item">
-            Aktif/Lulusan
-          </Link>
-        ),
-      },
-      {
         title: "Tracer Study",
         link: (
           <Link to="/tracer-study" className="dropdown-item">
@@ -160,16 +152,16 @@ export const MenuItems = [
       {
         title: "Judul Skripsi",
         link: (
-          <Link to="/judul-skripsi" className="dropdown-item">
-            Judul Skripsi
+          <Link to="/riset-pendidikan" className="dropdown-item">
+            Riset Pendidkan
           </Link>
         ),
       },
       {
         title: "Riset Kolaboratif",
         link: (
-          <Link to="/riset-kolaboratif" className="dropdown-item">
-            Riset Kolaboratif
+          <Link to="/riset-pkm" className="dropdown-item">
+            Riset PKM
           </Link>
         ),
       },
@@ -249,18 +241,10 @@ export const MenuItems = [
         ),
       },
       {
-        title: "Unit Penjaminan Mutu",
+        title: "Penjaminan Mutu",
         link: (
-          <Link to="/unit-penjaminan-mutu" className="dropdown-item">
-            Unit Penjaminan Mutu
-          </Link>
-        ),
-      },
-      {
-        title: "Dokumen Penjaminan Mutu",
-        link: (
-          <Link to="/dokumen-penjaminan-mutu" className="dropdown-item">
-            Dokumen Penjaminan Mutu
+          <Link to="/penjaminan-mutu" className="dropdown-item">
+            Penjaminan Mutu
           </Link>
         ),
       },
