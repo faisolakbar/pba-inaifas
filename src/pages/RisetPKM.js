@@ -9,7 +9,7 @@ export default function RisetPKM() {
           <title>Riset PKM</title>
           <meta
             name="description"
-            content="Riset Kolaboratif PBA INAIFAS"
+            content="Riset PKM PBA INAIFAS"
           />
           <link rel="canonical" href="http://localhost:3000/riset-pkm" />
           <meta name="robots" content="index, follow" />
