@@ -27,7 +27,7 @@ export default function JadwalKuliah() {
         <div className="prose prose-sm prose-h1:text-second prose-p:my-2 prose-p:leading-tight prose-a:my-2 tracking-wide max-w-none md:col-span-8 md:prose-base">
           <h1>Jadwal Kuliah</h1>
           <div>
-            <table className="table-auto lg:text-base">
+            <table className="table-auto text-sm lg:text-base">
               <tbody>
                 {data.data.map((jadwal) => (
                   <tr key={jadwal.id}>

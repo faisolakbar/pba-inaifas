@@ -32,7 +32,7 @@ export default function Kurikulum() {
             {data.data.map((kurikulum) => (
               <div key={kurikulum.id}>
                 <ReactMarkdown children={kurikulum.attributes.isi} />
-                  <table className="table-auto  lg:text-base">
+                  <table className="table-auto text-sm lg:text-base">
                     <thead className="border-y">
                       <tr>
                         <th>Kode Mata Kuliah</th>

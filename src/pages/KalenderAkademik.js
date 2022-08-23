@@ -30,7 +30,7 @@ export default function KalenderAkademik() {
         <div className="prose prose-sm prose-h1:text-second prose-p:my-2 prose-p:leading-tight prose-a:my-2 tracking-wide max-w-none md:col-span-8 md:prose-base">
           <h1>Kalender Akademik</h1>
           <div>
-            <table className="table-auto lg:text-base">
+            <table className="table-auto text-sm lg:text-base">
               <tbody>
                 {data.data.map((kalender) => (
                   <tr key={kalender.id}>

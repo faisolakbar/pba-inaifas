@@ -31,7 +31,7 @@ export default function KerjaSama() {
           <div className="prose prose-sm prose-h1:text-second prose-p:my-2 prose-p:leading-tight prose-a:my-2 tracking-wide max-w-none md:prose-base">
             <h1>Daftar Kerja Sama</h1>
             <div className="overflow-x-scroll">
-              <table className="table-auto lg:text-base">
+              <table className="table-auto text-sm lg:text-base">
                 <thead className="border-y">
                   <tr>
                     <th>No.</th>

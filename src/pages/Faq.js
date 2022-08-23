@@ -3,9 +3,10 @@ import Aside from "../component/Aside";
 import useFetch from "../hooks/useFetch";
 import { Disclosure, Transition } from "@headlessui/react";
 import { FaAngleUp } from "react-icons/fa";
+import ReactMarkdown from "react-markdown";
 
 export default function Faq() {
-  const { loading, error, data } = useFetch(`/api/faqs?populate=%2A`);
+  const { loading, error, data } = useFetch(`/api/faqs`);
   if (error !== null) {
     return <div>{error.message}</div>;
   }
@@ -28,7 +29,11 @@ export default function Faq() {
           <h1>FAQ</h1>
           <div className="space-y-2 lg:space-y-4">
             {data.data.map((faq) => (
-              <Disclosure as="div" key={faq.id} className=" w-full border border-main bg-white rounded-md px-3 py-2 drop-shadow-md active:scale-95 transition-transform cursor-default">
+              <Disclosure
+                as="div"
+                key={faq.id}
+                className=" w-full border border-main bg-white rounded-md px-3 py-2 drop-shadow-md active:scale-95 transition-transform cursor-default"
+              >
                 {({ open }) => (
                   <>
                     <Disclosure.Button
@@ -39,7 +44,11 @@ export default function Faq() {
                         {faq.attributes.pertanyaan}
                       </span>
                       <span className="group-hover:text-orange group-active:text-orange">
-                        <FaAngleUp className={`${open && "rotate-180"} transition-transform w-5 h-5`} />
+                        <FaAngleUp
+                          className={`${
+                            open && "rotate-180"
+                          } transition-transform w-5 h-5`}
+                        />
                       </span>
                     </Disclosure.Button>
                     <Transition
@@ -51,18 +60,9 @@ export default function Faq() {
                       leaveTo="transform scale-95 opacity-0"
                     >
                       <Disclosure.Panel as="div" className="pt-2">
-                        <p className="text-left m-0 md:m-0">{faq.attributes.jawaban}</p>
-                        {faq.attributes.pdf.data ? (
-                          <a
-                            href={faq.attributes.pdf.data.attributes.url}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            unduh
-                          </a>
-                        ) : (
-                          ""
-                        )}
+                        <div className="text-left m-0 md:m-0 prose prose-sm prose-headings:text-second prose-a:text-link tracking-wide max-w-none md:col-span-8 lg:prose-base">
+                          <ReactMarkdown children={faq.attributes.jawaban} />
+                        </div>
                       </Disclosure.Panel>
                     </Transition>
                   </>

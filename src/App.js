@@ -22,11 +22,10 @@ import Haki from "./pages/Haki";
 import TracerStudy from "./pages/TracerStudy";
 import Download from "./pages/Download";
 import Fasilitas from "./pages/Fasilitas";
-import RisetPendidikan from "./pages/RisetPendidikan";
+import Riset from "./pages/Riset";
 import Hmps from "./pages/Hmps";
 import DaftarPPLPKM from "./pages/DaftarPPLPKM";
 import DaftarUjianSkripsi from "./pages/DaftarUjianSkripsi";
-import RisetPKM from "./pages/RisetPKM";
 import LaporanTahunan from "./pages/LaporanTahunan";
 import PenjaminanMutu from "./pages/Penjaminan_Mutu";
 import Faq from "./pages/Faq";
@@ -68,8 +67,8 @@ function App() {
         <Route path="/hmps" element={<Hmps />} />
 
         {/*riset*/}
-        <Route path="/riset-pendidikan" element={<RisetPendidikan />} />
-        <Route path="/riset-PKM" element={<RisetPKM />} />
+        <Route path="/riset-pendidikan" element={<Riset kategori="Pendidikan" />} />
+        <Route path="/riset-PKM" element={<Riset kategori="PKM" />} />
         <Route path="/daftar-ppl-pkm" element={<DaftarPPLPKM />} />
         <Route path="/daftar-ujian-skripsi" element={<DaftarUjianSkripsi />} />
 

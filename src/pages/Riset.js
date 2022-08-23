@@ -1,15 +1,12 @@
 import { useState } from "react";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import Aside from "../component/Aside";
-// import Pagination from "../component/Pagination";
+import DataRisetPendidikan from "../component/DataRisetPendidikan";
 import useFetch from "../hooks/useFetch";
 
-export default function RisetPendidikan() {
-  // const [page, setPage] = useState(1);
+export default function Riset({kategori}) {
   const [tahun, setTahun] = useState("2021");
-  const { loading, error, data } = useFetch(
-    `/api/riset-pendidikans?populate[data_riset][populate][0]=nama&filters[tahun][$eq]=${tahun}`
-  );
+  const { loading, error, data } = useFetch(`/api/tahun-risets`);
   if (error !== null) {
     return <div>{error.message}</div>;
   }
@@ -21,26 +18,38 @@ export default function RisetPendidikan() {
     <>
       <HelmetProvider>
         <Helmet>
-          <title>Riset Pendidikan</title>
+          <title>Riset {kategori}</title>
           <meta
             name="description"
-            content="Riset Pendidikan Mahasiswa PBA INAIFAS"
+            content={`Riset ${kategori} Mahasiswa PBA INAIFAS`}
           />
-          <link rel="canonical" href="http://localhost:3000/riset-pendidikan" />
+          <link rel="canonical" href={`http://localhost:3000/riset-${kategori}`} />
           <meta name="robots" content="index, follow" />
         </Helmet>
       </HelmetProvider>
       <div className="font-roboto container mx-auto text-slate700 my-2 pb-2 lg:grid grid-cols-12 gap-6 md:my-4 md:pb-4 lg:my-8 lg:pb-8 lg:gap-8">
         <div className="lg:col-span-8">
           <div className="prose prose-sm prose-h1:text-second prose-p:my-2 prose-p:leading-tight prose-a:my-2 tracking-wide max-w-none md:prose-base">
-            <h1>Riset Pendidikan</h1>
+            <h1 className="capitalize">Riset {kategori}</h1>
           </div>
-          {
-            data.data.map((riset)=>(
-              <button onClick={setTahun(riset.attributes.tahun)}>{riset.attributes.tahun}</button>
-            ))
-          }
-          {/* <Pagination data={data} page={page} setPage={setPage} /> */}
+          <div className="mt-4 pt-2">
+            {data.data.map((tahunRiset) => (
+              <button
+                key={tahunRiset.id}
+                className={
+                  `
+              ${// eslint-disable-next-line
+                tahunRiset.attributes.tahun === tahun ? "bg-main/90" : "bg-main/40"
+              }` +
+                  " py-1 px-2 mr-2 text-sm text-white rounded-full transition-colors duration-300"
+                }
+                onClick={() => setTahun(tahunRiset.attributes.tahun)}
+              >
+                {tahunRiset.attributes.tahun}
+              </button>
+            ))}
+          </div>
+          <DataRisetPendidikan tahun={tahun} kategori={kategori} />
           <div className="md:hidden flex justify-center my-10">
             <span className="h-[1px] w-3/4 bg-slate400"></span>
           </div>
