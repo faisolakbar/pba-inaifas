@@ -22,7 +22,7 @@ export default function NavNew() {
         <div
           className={`${
             open === true && "-translate-x-full"
-          } fixed z-[10000] bg-main h-screen w-1/2 top-0 -right-full transition-transform duration-500`}
+          } fixed z-[10000] bg-main h-screen w-72 top-0 -right-full transition-transform duration-500`}
         >
           <div className="">
             <button onClick={() => setOpen(false)} className="active:outline-none">
