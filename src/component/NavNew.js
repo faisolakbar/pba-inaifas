@@ -8,13 +8,15 @@ export default function NavNew() {
   return (
     <>
       <nav className="flex justify-end bg-main">
-        <button onClick={() => setOpen(true)}>click</button>
+        <button onClick={() => setOpen(true)}
+        className="active:outline-none"
+        >click</button>
         {/* button full screen */}
         <button
           onClick={() => setOpen(false)}
           className={`${
             open === true ? "block" : "hidden"
-          } fixed h-screen w-screen inset-0 z-[9999]`}
+          } active:outline-none fixed h-screen w-screen inset-0 z-[9999]`}
         >close me</button>
 
         <div
@@ -23,7 +25,7 @@ export default function NavNew() {
           } fixed z-[10000] bg-main h-screen w-64 top-0 -right-full transition-transform duration-500`}
         >
           <div className="">
-            <button onClick={() => setOpen(false)} className="">
+            <button onClick={() => setOpen(false)} className="active:outline-none">
               click
             </button>
           </div>
