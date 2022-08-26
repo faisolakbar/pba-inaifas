@@ -17,12 +17,12 @@ export default function NavNew() {
           className={`${
             open === true ? "block" : "hidden"
           } active:outline-none fixed h-screen w-screen inset-0 z-[9999]`}
-        >close me</button>
+        ></button>
 
         <div
           className={`${
             open === true && "-translate-x-full"
-          } fixed z-[10000] bg-main h-screen w-64 top-0 -right-full transition-transform duration-500`}
+          } fixed z-[10000] bg-main h-screen w-1/2 top-0 -right-full transition-transform duration-500`}
         >
           <div className="">
             <button onClick={() => setOpen(false)} className="active:outline-none">
