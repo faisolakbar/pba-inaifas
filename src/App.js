@@ -29,13 +29,15 @@ import DaftarUjianSkripsi from "./pages/DaftarUjianSkripsi";
 import LaporanTahunan from "./pages/LaporanTahunan";
 import PenjaminanMutu from "./pages/Penjaminan_Mutu";
 import Faq from "./pages/Faq";
+import NavNew from "./component/NavNew";
 
 function App() {
 
   return (
     <div className="overflow-x-hidden scroll-smooth">
       <Header />
-      <Nav />
+      <NavNew />
+      {/* <Nav /> */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="*" element={<ErrorPages/>}></Route>

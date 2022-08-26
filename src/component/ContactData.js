@@ -57,7 +57,7 @@ export function EmailData() {
           <div className="flex items-center space-x-1 group">
             <BsEnvelope className="group-hover:text-orange group-active:text-second lg:h-5 lg:w-5" />
             <a
-              className="font-light text-sm group-hover:text-orange group-active:text-second lg:text-base"
+              className="font-light text-sm group-hover:text-orange group-active:text-second lg:text-xs"
               href={`https://${email.attributes.link}`}
               target="_blank"
               rel="noreferrer"

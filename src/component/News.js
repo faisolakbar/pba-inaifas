@@ -80,10 +80,10 @@ export default function ArticlesData(props) {
                 </div>
 
                 <div className="font-roboto leading-snug tracking-wide">
-                  <h2 className=" text-second group-hover:text-orange mb-2 md:text-lg lg:leading-tight">
+                  <h2 className=" text-second group-hover:text-orange mb-2 md:text-lg lg:leading-tightlg:text-xl">
                     {berita.attributes.judul}
                   </h2>
-                  <p className="text-sm leading-snug line-clamp-3 indent-3 text-slate500 md:text-base lg:leading-tight">
+                  <p className="text-sm leading-snug line-clamp-3 text-slate500 md:text-base lg:leading-tight">
                     {berita.attributes.isi}
                   </p>
                 </div>

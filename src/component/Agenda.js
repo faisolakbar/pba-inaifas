@@ -60,7 +60,7 @@ export default function Agenda() {
                   } transition-all duration-500 flex items-center space-x-2 pt-4 cursor-pointer group lg:pt-7`}
                 >
                   <div className="w-1/4 h-fit flex flex-col items-center bg-slate400 rounded-sm">
-                    <time className="font-bold text-white">
+                    <time className="font-bold text-white text-2xl">
                       {new Intl.DateTimeFormat("in-ID", { month: "long" })
                         .format(
                           new Date(agenda.attributes.publishedAt).getMonth()
@@ -71,7 +71,7 @@ export default function Agenda() {
                       {new Date(agenda.attributes.publishedAt).getDate()}
                     </time>
                   </div>
-                  <h2 className="text-base w-3/4 h-fit flex items-center text-second font-roboto leading-snug line-clamp-3 group-hover:text-orange md:text-lg md:leading-tight">
+                  <h2 className="text-base w-3/4 h-fit flex items-center text-second font-roboto leading-snug line-clamp-3 group-hover:text-orange md:text-lg md:leading-tight lg:text-xl">
                     {agenda.attributes.judul}
                   </h2>
                 </div>

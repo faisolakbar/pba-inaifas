@@ -66,10 +66,10 @@ export default function Testimoni() {
                       </p>
                     </div>
                     <div className="pt-4 text-slate800 md:p-0">
-                      <FaQuoteLeft />
+                      
                       <h3 className="">{testi.attributes.isi}</h3>
                       <div className="flex justify-end">
-                        <FaQuoteRight className="" />
+                        
                       </div>
                     </div>
                   </div>

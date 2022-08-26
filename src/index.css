@@ -34,6 +34,16 @@
   }
 }
 
+@layer base {
+  input,
+  textarea,
+  button,
+  select,
+  a {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }
+}
+
 @layer components {
   .dropdown-item {
     @apply block w-full px-2 py-1;

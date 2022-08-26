@@ -4,8 +4,8 @@ import { AlamatFooterData, EmailData, WhatsappData } from "./ContactData";
 export default function Footer() {
   return (
     <div className="bg-second text-white py-8 text-sm font-light mt-5 lg:text-base">
-      <div className="container mx-auto lg:flex justify-between items-start space-x-4">
-        <div className="hidden lg:block lg:w-1/3">
+      <div className="container text-center  mx-auto lg:flex lg:mb-0 lg:text-left justify-between items-start space-x-4">
+        <div className="mb-4 block lg:w-1/3">
           <img src={footerlogo} alt="footerlogo" className="" />
         </div>
 
@@ -104,7 +104,7 @@ export default function Footer() {
           <div className="my-2">
           <AlamatFooterData/>
           </div>
-          <div className="md:flex md:space-x-3 lg:space-x-6">
+          <div className="flex space-x-3 md:justify-center lg:justify-start lg:space-x-4">
             <WhatsappData />
             <EmailData />
           </div>
