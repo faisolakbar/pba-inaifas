@@ -16,7 +16,7 @@ export default function MenuItems({ menu, setNavOpen }) {
       {menu.submenu ? (
         <>
           <button
-            className="active:bg-second/20 w-full flex justify-between items-center"
+            className="active:bg-second/20 active:outline-none w-full flex justify-between items-center"
           >
             {menu.title}
             <span
