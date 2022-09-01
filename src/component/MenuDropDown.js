@@ -1,11 +1,11 @@
 import { Popover } from "@headlessui/react";
-import { MenuItems } from "./Menu";
+import { menuItemsData } from "./menuItemsData";
 import React from "react";
 
 export default function MenuDropDown() {
   return (
     <>
-      {MenuItems.map((menu, index) => {
+      {menuItemsData.map((menu, index) => {
         return (
           <React.Fragment key={index}>
             <Popover.Group

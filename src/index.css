@@ -46,7 +46,7 @@
 
 @layer components {
   .dropdown-item {
-    @apply block w-full px-2 py-1;
+    @apply inline-block w-full px-2 py-1;
   }
 }
 

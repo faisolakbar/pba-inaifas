@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
 
-export const MenuItems = [
+export const menuItemsData = [
   {
     title: "Beranda",
     link: (
       <Link
+        className="w-full flex justify-start"
         to="/"
         onClick={() =>
           window.scrollTo({
@@ -104,6 +105,7 @@ export const MenuItems = [
     title: "Fasilitas",
     link: (
       <Link
+        className="w-full flex justify-start"
         to="/fasilitas"
         onClick={() =>
           window.scrollTo({
@@ -216,6 +218,7 @@ export const MenuItems = [
     title: "Download",
     link: (
       <Link
+        className="w-full flex justify-start"
         to="/download"
         onClick={() =>
           window.scrollTo({
@@ -254,6 +257,7 @@ export const MenuItems = [
     title: "FAQ",
     link: (
       <Link
+        className="w-full flex justify-start"
         to="/faq"
         onClick={() =>
           window.scrollTo({
