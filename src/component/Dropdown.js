@@ -1,14 +1,18 @@
-export default function Dropdown({ submenus, menuItemsOpen, setMenuOpen }) {
+export default function Dropdown({ submenus, menuItemsOpen, setMenuItemsOpen, setNavOpen }) {
+  const close = ()=>{
+    setNavOpen(false);
+    setMenuItemsOpen(false);
+  }
   return (
     <ul
       className={`${
         menuItemsOpen
           ? "block"
           : "hidden"
-      } ml-2 border-l-[1px] border-second/20 lg:absolute lg:z-[10000] lg:inset-0 lg:bg-main lg:m-0 lg:w-fit lg:whitespace-nowrap `}
+      } lg:group-hover:flex ml-2 border-l-[1px] border-second/20 lg:bg-second lg:absolute lg:z-[1000] lg:ml-0 lg:mt-1 lg:p-0.5 lg:shadow-white lg:shadow-sm lg:rounded-md lg:bg-second/40 lg:drop-shadow-lg lg:backdrop-blur-md lg:h-[165px] lg:flex-col lg:justify-between`}
     >
       {submenus.map((submenu, index) => (
-        <li onClick={()=>setMenuOpen(false)} key={index} className={`text-slate200 lg:`}>
+        <li onClick={()=>close()} key={index} className={`text-slate200 lg:text-base lg:hover:bg-orange lg:rounded-md lg:text-white`}>
           {submenu.link}
         </li>
       ))}

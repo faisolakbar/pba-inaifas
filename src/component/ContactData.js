@@ -23,7 +23,7 @@ export function WhatsappData() {
           <div className="flex items-center space-x-1  group ">
             <FaWhatsapp className="group-hover:text-orange group-active:text-second lg:h-5 lg:w-5" />
             <a
-              className="font-light text-sm text-slate-600 group-hover:text-orange group-active:text-second lg:text-base"
+              className="font-light text-sm text-slate-600 group-hover:text-orange group-active:text-second"
               href={`https://${wa.attributes.link}`}
               target="_blank"
               rel="noreferrer"
@@ -57,7 +57,7 @@ export function EmailData() {
           <div className="flex items-center space-x-1 group">
             <BsEnvelope className="group-hover:text-orange group-active:text-second lg:h-5 lg:w-5" />
             <a
-              className="font-light text-sm group-hover:text-orange group-active:text-second lg:text-xs"
+              className="font-light text-sm group-hover:text-orange group-active:text-second"
               href={`https://${email.attributes.link}`}
               target="_blank"
               rel="noreferrer"

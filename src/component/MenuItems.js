@@ -7,16 +7,16 @@ export default function MenuItems({ menu, setNavOpen }) {
   return (
     <li
       onClick={() => setMenuItemsOpen(!menuItemsOpen)}
-      onMouseOver={() => {
-        setMenuItemsOpen(true);
-      }}
+      // onMouseOver={() => {
+      //   setMenuItemsOpen(true);
+      // }}
       onMouseLeave={() => setMenuItemsOpen(false)}
-      className={`text-white text-sm py-1`}
+      className={`group text-white text-sm py-1 lg:text-base`}
     >
       {menu.submenu ? (
         <>
           <button
-            className="active:bg-second/20 active:outline-none focus:outline-none w-full flex justify-between items-center"
+            className="active:bg-second/20 active:outline-none focus:outline-none w-full flex justify-between items-center lg:active:bg-none"
           >
             {menu.title}
             <span
@@ -27,7 +27,7 @@ export default function MenuItems({ menu, setNavOpen }) {
               <FaAngleRight />
             </span>
           </button>
-          <Dropdown submenus={menu.submenu} menuItemsOpen={menuItemsOpen} setNavOpen={setNavOpen} />
+          <Dropdown submenus={menu.submenu} menuItemsOpen={menuItemsOpen} setMenuItemsOpen={setMenuItemsOpen} setNavOpen={setNavOpen} />
         </>
       ) : (
         <button onClick={()=>setNavOpen(false)} className={`w-full active:bg-second/20`}>{menu.link}</button>

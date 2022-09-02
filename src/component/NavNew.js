@@ -8,9 +8,9 @@ export default function NavNew() {
   const [navOpen, setNavOpen] = useState(false);
   return (
     <>
-      <nav className="mt-2 bg-main">
+      <nav className="mt-2 bg-main lg:mt-4">
         <div className={`container mx-auto py-2 ${navOpen && "flex justify-end items-center"} `}>
-          <div className="w-full space-x-3 flex justify-between">
+          <div className="w-full space-x-3 flex justify-between lg:hidden">
             <div className="w-full">
               <SearchBar />
             </div>
@@ -44,7 +44,7 @@ export default function NavNew() {
             onClick={() => setNavOpen(false)}
             className={`${
               navOpen ? "visible" : "invisible"
-            } fixed z-[10000]  active:outline-none space-y-1`}
+            } fixed z-[10000]  active:outline-none space-y-1 lg:hidden`}
           >
             <span
               className={`${
@@ -74,15 +74,15 @@ export default function NavNew() {
           <div
             className={`${
               navOpen === true && "translate-x-full"
-            } fixed z-[10000] bg-main h-screen w-60 top-0 -left-60 transition-transform duration-500 p-4`}
+            } fixed z-[10000] bg-main h-screen w-60 top-0 -left-60 transition-transform duration-500 p-4 lg:static lg:h-fit lg:w-full lg:px-0 lg:py-1`}
           >
-            <div className="">
+            <div className="lg:hidden">
               <img src={logoPbaHeader} alt="Logo-Inaifas-Header" />
             </div>
-            <div className="my-2">
-              <ul>
+            <div className="my-2 lg:m-0">
+              <ul className="lg:flex lg:justify-between">
                 {menuItemsData.map((menu, index) => (
-                  <MenuItems menu={menu} setNavOpen={setNavOpen} key={index} />
+                  <MenuItems menu={menu} setNavOpen={setNavOpen} navOpen={navOpen} key={index} />
                 ))}
               </ul>
             </div>

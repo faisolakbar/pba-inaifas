@@ -104,7 +104,7 @@ export default function Footer() {
           <div className="my-2">
           <AlamatFooterData/>
           </div>
-          <div className="flex space-x-3 md:justify-center lg:justify-start lg:space-x-4">
+          <div className="flex space-x-3 justify-center lg:justify-start lg:space-x-4">
             <WhatsappData />
             <EmailData />
           </div>
