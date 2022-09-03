@@ -8,7 +8,7 @@ export default function NavNew() {
   const [navOpen, setNavOpen] = useState(false);
   return (
     <>
-      <nav className="mt-2 bg-main lg:mt-4">
+      <nav className="mt-2 bg-main md:mt-4 lg:mt-8">
         <div className={`container mx-auto py-2 ${navOpen && "flex justify-end items-center"} `}>
           <div className="w-full space-x-3 flex justify-between lg:hidden">
             <div className="w-full">
