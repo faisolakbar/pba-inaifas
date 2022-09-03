@@ -17,7 +17,7 @@ import {
 const config = require("../config.json");
 export default function ShareButton(props) {
   const params = useParams();
-  const url = `${config.url}/articledetails/${params.id}/${params.slug}`;
+  const url = `${config["url-fe"]}/articledetails/${params.id}/${params.slug}`;
   const judul = props.title;
   return (
     <>
