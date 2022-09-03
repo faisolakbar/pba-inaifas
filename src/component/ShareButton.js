@@ -14,9 +14,10 @@ import {
   FaFacebookMessenger,
 } from "react-icons/fa";
 
+const config = require("../config.json");
 export default function ShareButton(props) {
   const params = useParams();
-  const url = `http://localhost:3000/articledetails/${params.id}/${params.slug}`;
+  const url = `${config.url}/articledetails/${params.id}/${params.slug}`;
   const judul = props.title;
   return (
     <>
