@@ -1,70 +1,15 @@
-# Getting Started with Create React App
+#Website Program Studi Pendidikan Bahsa Arab INAIFAS Kencong Jember
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+link website: https://pba-inaifas.herokuapp.com/
 
-## Available Scripts
+##Sejarah PBA INAIFAS
 
-In the project directory, you can run:
+Program Studi Pendidikan Bahasa Arab (Prodi PBA) merupakan salah satu prodi yang ada di bawah naungan Fakultas Tarbiyah Institut Agama Islam Al-Falah As-Sunniyyah (INAIFAS) Kencong Jember. Prodi PBA mendapat pengesahan pendirian berdasarkan SK Pejabat Penandatangan Derektur Jenderal Pembinaan Kelembagaan Agama Islam Departemen Agama RI Nomor 2013 Tahun 2016 tanggal 11 April 2016 dan izin operasionalnya pada Juli 2016.
 
-### `npm start`
+##Pembuatan Website
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Website ini dikembangkan oleh mitra PBA INAIFAS dari Universitas Bina Informatika Yogyakarta Muhammad Faishol Akbar, Muhklis Ahnan, dan Azizah Tri Ramadhani. Muhammad Faishol Akbar, atau yang akrab disapa Faishol, memimpin pengembangan website PBA INAIFAS ini.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Website PBA INAIFAS dikonsep agar mudah digunakan oleh pengunjung. Pengunjung dapat mudah mengaksesnya karena ditunjang dengan desain minimalis. Tatanan website di samping menimbang aspek estetika juga memedulikan psikologi pengunjung ketika menggunakannya, sebab tak jarang website perguruan tinggi ingin menampilkan banyak informasi tapi menyulitkan pengguna dalam mengaksesnya.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Website ini dibangun menggunakan React-js sebagai teknologi untuk Front-end dan menggunakan Strapi App untuk manajemen konten. Website ini di kembangkan sejak pertengahan bulan juni 2022.
